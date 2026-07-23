@@ -91,7 +91,7 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 1.1, ease: 'easeOut' }}
           className="lg:col-span-5 order-1 lg:order-2 relative"
         >
-          <div className="relative mx-auto max-w-sm lg:max-w-none">
+          <div className="relative mx-auto max-w-sm lg:max-w-md xl:max-w-sm 2xl:max-w-xs">
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
