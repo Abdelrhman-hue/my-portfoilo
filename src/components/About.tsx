@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import portrait from '@/assets/abdelrahman.png.asset.json'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -11,25 +12,26 @@ export function About() {
   return (
     <section id="about" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        {/* Section Label */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">About Bruce</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">About</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
-        {/* First Block */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 mb-24 lg:mb-32">
           <motion.div
             {...fadeInUp}
             className="order-2 lg:order-1"
           >
-            <img
-              src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Early work - Street photography"
-              className="w-full h-auto grayscale"
-            />
+            <div className="relative overflow-hidden group">
+              <img
+                src={portrait.url}
+                alt="Abdelrahman Attia"
+                className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000"
+              />
+              <div className="absolute inset-0 ring-1 ring-white/10 pointer-events-none" />
+            </div>
             <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              PARSONS SCHOOL OF DESIGN - NEW YORK / USA
+              Abdelrahman Attia — Cairo / Egypt
             </p>
           </motion.div>
 
@@ -39,42 +41,38 @@ export function About() {
             className="order-1 lg:order-2 flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              It may not be obvious, but Bruce studied computer science at MIT, 
-              with a minor in visual arts. Preferring lenses to algorithms, 
-              he quickly abandoned a promising tech career to study Photography 
-              and Visual Storytelling at Parsons School of Design in New York.
+              I'm a Full-Stack Developer based in Egypt, focused on the MERN
+              stack and Next.js. I love building fast, accessible interfaces
+              backed by clean, well-typed APIs — from the database layer all
+              the way up to pixel-perfect components.
             </p>
           </motion.div>
         </div>
 
-        {/* Quote Block */}
         <motion.div
           {...fadeInUp}
           className="mb-24 lg:mb-32"
         >
           <h2 className="font-display text-[8vw] lg:text-section leading-none tracking-tight text-gray-300">
-            "NAMED BY THE<br />
-            <span className="text-white underline underline-offset-8">2023 APERTURE AWARDS</span><br />
-            AS ONE OF THE TOP TEN<br />
-            PHOTOGRAPHERS IN THE WORLD."
+            "I BUILD<br />
+            <span className="text-white underline underline-offset-8">END-TO-END</span><br />
+            WEB PRODUCTS —<br />
+            FRONT AND BACK."
           </h2>
           <p className="mt-6 text-sm text-gray-500 tracking-widest uppercase">
-            GLOBAL PHOTOGRAPHY<br />
-            DIRECTOR RANK
+            MERN · NEXT.JS · TYPESCRIPT
           </p>
         </motion.div>
 
-        {/* Second Block */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 mb-24 lg:mb-32">
           <motion.div
             {...fadeInUp}
             className="flex items-center lg:text-right"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              Bruce spent a little over a year in New York before moving to 
-              London as a Junior Photographer for Magnum Photos. He met some 
-              incredible people at the legendary agency, and they're still 
-              friends to this day.
+              On the front end I work with React, Next.js, TypeScript, Redux
+              and Tailwind CSS to build modern, responsive interfaces with
+              thoughtful motion and interaction design.
             </p>
           </motion.div>
 
@@ -82,29 +80,27 @@ export function About() {
             {...fadeInUp}
             transition={{ ...fadeInUp.transition, delay: 0.2 }}
           >
-            <img
-              src="https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Magnum Photos Office"
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
-            />
-            <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              MAGNUM PHOTOS - LONDON / UK
-            </p>
+            <div className="border border-gray-800 p-8 lg:p-10 bg-[#0d0d0d]">
+              <p className="text-xs text-gray-500 tracking-widest uppercase mb-4">Frontend</p>
+              <div className="flex flex-wrap gap-2">
+                {['React', 'Next.js', 'TypeScript', 'Redux', 'Tailwind CSS', 'Framer Motion'].map((t) => (
+                  <span key={t} className="px-3 py-1 text-sm text-gray-300 border border-gray-700 rounded-full">{t}</span>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
 
-        {/* Third Block */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
           <motion.div {...fadeInUp}>
-            <img
-              src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Bruce shooting for National Geographic"
-              className="w-full h-auto grayscale"
-            />
-            <p className="mt-4 text-xs text-gray-500 tracking-widest uppercase">
-              SHOOTING FOR NATIONAL GEOGRAPHIC - PATAGONIA / AR<br />
-              (2019)
-            </p>
+            <div className="border border-gray-800 p-8 lg:p-10 bg-[#0d0d0d]">
+              <p className="text-xs text-gray-500 tracking-widest uppercase mb-4">Backend</p>
+              <div className="flex flex-wrap gap-2">
+                {['Node.js', 'Express', 'MongoDB', 'REST APIs', 'Authentication', 'Git & GitHub'].map((t) => (
+                  <span key={t} className="px-3 py-1 text-sm text-gray-300 border border-gray-700 rounded-full">{t}</span>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -113,12 +109,10 @@ export function About() {
             className="flex items-center"
           >
             <p className="text-base lg:text-lg text-gray-300 leading-relaxed">
-              From London, Bruce moved to Berlin with VII Photo Agency. Where he 
-              worked under a great Art Director, Hans Mueller. From there he 
-              went on to build a truly global career, first as Staff Photographer 
-              then as Creative Director for the likes of National Geographic, 
-              Time Magazine, and The New York Times, before finally going 
-              independent in 2020.
+              On the back end I build APIs and services with Node.js, Express
+              and MongoDB — always shipping features that are secure,
+              scalable, and easy to maintain. Always learning, always
+              iterating.
             </p>
           </motion.div>
         </div>
