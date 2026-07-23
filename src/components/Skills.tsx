@@ -1,14 +1,18 @@
 import { motion } from 'framer-motion'
 
 const skills = [
-  'Editorial Photography',
-  'Portrait Photography',
-  'Documentary',
-  'Commercial Campaigns',
-  'Art Direction',
-  'Visual Storytelling',
-  'Photo Editing',
-  'Creative Direction',
+  'React.js',
+  'Next.js',
+  'TypeScript',
+  'Node.js',
+  'Express.js',
+  'MongoDB',
+  'Redux Toolkit',
+  'Tailwind CSS',
+  'REST APIs',
+  'Git & GitHub',
+  'Framer Motion',
+  'Figma to Code',
 ]
 
 const fadeInUp = {
@@ -32,7 +36,7 @@ export function Skills() {
           {...fadeInUp}
           className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-12 lg:mb-20"
         >
-          SKILLS
+          TECH<br />STACK
         </motion.h2>
 
         {/* Skills List */}

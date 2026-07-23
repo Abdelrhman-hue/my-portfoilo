@@ -2,44 +2,31 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    title: 'Senior Photographer & Creative Director',
-    company: 'National Geographic',
-    location: 'Washington D.C.',
-    period: '2020 — Present',
-    description: 'Leading visual storytelling projects across five continents. Responsible for conceptualizing and executing long-form documentary series, managing a team of 8 photographers, and establishing visual guidelines for flagship publications.',
-    skills: ['Documentary Photography', 'Team Leadership', 'Art Direction', 'Visual Storytelling', 'Project Management'],
+    title: 'E-Commerce Platform',
+    company: 'Full-Stack Project',
+    location: 'MERN + Next.js',
+    period: 'Featured',
+    description:
+      'A complete online store with product catalog, cart, checkout flow, authentication and an admin dashboard. Built with Next.js on the front end and a Node/Express + MongoDB API on the back end.',
+    skills: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
   },
   {
-    title: 'Staff Photographer',
-    company: 'The New York Times',
-    location: 'New York, NY',
-    period: '2018 — 2020',
-    description: 'Covered breaking news, features, and editorial assignments for print and digital platforms. Specialized in portrait photography and human interest stories. Work featured on front page 47 times.',
-    skills: ['Editorial Photography', 'Breaking News', 'Portrait Photography', 'Deadline Management', 'Photo Editing'],
+    title: 'Personal Portfolio',
+    company: 'Design & Development',
+    location: 'React · Framer Motion',
+    period: 'Featured',
+    description:
+      'A minimal editorial-style portfolio to showcase projects and technical writing. Focused on typography, motion, and performance with a fully responsive layout.',
+    skills: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite'],
   },
   {
-    title: 'Creative Director',
-    company: 'Time Magazine',
-    location: 'New York, NY',
-    period: '2016 — 2018',
-    description: 'Oversaw visual direction for special issues and cover stories. Collaborated with editors to develop compelling visual narratives. Managed relationships with contributing photographers worldwide.',
-    skills: ['Creative Direction', 'Visual Strategy', 'Team Coordination', 'Brand Identity', 'Magazine Publishing'],
-  },
-  {
-    title: 'Staff Photographer',
-    company: 'VII Photo Agency',
-    location: 'Berlin, Germany',
-    period: '2014 — 2016',
-    description: 'Worked on long-term documentary projects focusing on social issues and human rights. Assignments included coverage in conflict zones and humanitarian crises across Europe and Middle East.',
-    skills: ['Documentary', 'Conflict Photography', 'Humanitarian Coverage', 'Long-form Projects', 'Risk Assessment'],
-  },
-  {
-    title: 'Junior Photographer',
-    company: 'Magnum Photos',
-    location: 'London, UK',
-    period: '2012 — 2014',
-    description: 'Assisted senior photographers on international assignments. Developed technical skills in both digital and analog photography. First solo exhibition at the agency gallery in 2013.',
-    skills: ['Analog Photography', 'Digital Processing', 'Studio Lighting', 'Archive Management', 'Exhibition Curation'],
+    title: 'Admin Dashboard',
+    company: 'Data & Analytics UI',
+    location: 'React · Redux',
+    period: 'Featured',
+    description:
+      'A modern admin dashboard for managing users, orders and analytics. Built with a component-driven architecture, Redux Toolkit for state and a clean, accessible UI.',
+    skills: ['React', 'Redux Toolkit', 'TypeScript', 'Charts', 'REST API', 'Tailwind CSS'],
   },
 ]
 
@@ -56,7 +43,7 @@ export function Work() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div {...fadeInUp} className="mb-16">
-          <span className="text-sm text-gray-500 tracking-widest uppercase">Career</span>
+          <span className="text-sm text-gray-500 tracking-widest uppercase">Projects</span>
           <div className="w-6 h-px bg-gray-600 mt-2" />
         </motion.div>
 
@@ -64,7 +51,7 @@ export function Work() {
           {...fadeInUp}
           className="font-display text-[10vw] lg:text-section leading-none tracking-tight mb-16 lg:mb-24"
         >
-          WORK<br />EXPERIENCE
+          SELECTED<br />PROJECTS
         </motion.h2>
 
         {/* Experiences */}
