@@ -114,7 +114,7 @@ export function Hero() {
       </div>
 
       {/* Bottom marquee */}
-      <div className="absolute bottom-[-16px] left-0 right-0 overflow-hidden border-t border-white/10 py-4 hidden md:block">
+      <div className="absolute bottom-[-20px] left-0 right-0 overflow-hidden border-t border-white/10 py-4 hidden md:block">
         <motion.div
           animate={{ x: ['0%', '-50%'] }}
           transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
