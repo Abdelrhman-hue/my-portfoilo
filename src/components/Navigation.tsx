@@ -5,17 +5,15 @@ import { cn } from '@/lib/utils'
 
 const navItems = [
   { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'work', label: 'Work' },
-  { id: 'education', label: 'Education' },
-  { id: 'writing', label: 'Writing' },
-  { id: 'speaking', label: 'Speaking' },
+  { id: 'skills', label: 'Stack' },
+  { id: 'work', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
 ]
 
 const socialLinks = [
-  { label: 'Mail', href: 'mailto:bruce@banner.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'Vimeo', href: 'https://vimeo.com' },
+  { label: 'GitHub', href: 'https://github.com/Abdelrhman-hue' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abdelrahman-sfwat-attia-9526b3423' },
+  { label: 'Mail', href: 'mailto:abdelrhmansfawt@gmail.com' },
 ]
 
 export function Navigation() {
