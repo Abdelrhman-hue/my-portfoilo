@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
 
 const contacts = [
-  { label: 'UNITED STATES', type: 'location', link: '#' },
-  { label: 'UNITED KINGDOM', type: 'location', link: '#' },
+  { label: 'LINKEDIN — ABDELRAHMAN ATTIA', type: 'social', link: 'https://www.linkedin.com/in/abdelrahman-sfwat-attia-9526b3423' },
+  { label: 'GITHUB — @ABDELRHMAN-HUE', type: 'social', link: 'https://github.com/Abdelrhman-hue' },
+  { label: 'WHATSAPP — +20 101 260 8076', type: 'social', link: 'https://wa.me/201012608076' },
 ]
 
 const fadeInUp = {
@@ -44,12 +45,12 @@ export function Contact() {
           className="mb-12 lg:mb-16 max-w-2xl"
         >
           <h3 className="text-xl md:text-2xl lg:text-3xl text-white font-light leading-tight mb-4">
-            I'M NOTORIOUSLY<br />
-            SLOW AT GETTING<br />
-            BACK TO EMAILS
+            HAVE A PROJECT<br />
+            IN MIND?<br />
+            LET'S BUILD IT.
           </h3>
           <p className="text-sm text-gray-500 tracking-widest uppercase">
-            IN A HURRY? PLEASE CONTACT MY AWESOME PRODUCERS
+            Open to full-time roles &amp; freelance projects worldwide
           </p>
         </motion.div>
 
@@ -59,6 +60,8 @@ export function Contact() {
             <motion.a
               key={contact.label}
               href={contact.link}
+              target={contact.link.startsWith('http') ? '_blank' : undefined}
+              rel={contact.link.startsWith('http') ? 'noopener noreferrer' : undefined}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -86,26 +89,26 @@ export function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16">
             <a
-              href="mailto:bruce@banner.photography"
+              href="mailto:abdelrhmansfawt@gmail.com"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              bruce@banner.photography
+              abdelrhmansfawt@gmail.com
             </a>
             <a
-              href="https://instagram.com/brucebanner"
+              href="https://github.com/Abdelrhman-hue"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              Instagram
+              GitHub
             </a>
             <a
-              href="https://vimeo.com/brucebanner"
+              href="https://www.linkedin.com/in/abdelrahman-sfwat-attia-9526b3423"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg lg:text-xl text-gray-300 hover:text-white transition-colors underline underline-offset-4"
             >
-              Vimeo
+              LinkedIn
             </a>
           </div>
         </motion.div>
@@ -116,10 +119,10 @@ export function Contact() {
           className="mt-24 lg:mt-32 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-xs text-gray-600">
-            © {new Date().getFullYear()} Bruce Banner Photography. All rights reserved.
+            © {new Date().getFullYear()} Abdelrahman Attia. All rights reserved.
           </p>
           <p className="text-xs text-gray-600">
-            New York / London
+            Cairo · Egypt
           </p>
         </motion.footer>
       </div>
