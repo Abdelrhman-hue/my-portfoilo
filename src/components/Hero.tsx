@@ -3,7 +3,7 @@ import portrait from '@/assets/abdelrahman.png.asset.json'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-background">
+    <section className="relative min-h-screen w-full overflow-visible bg-background">
       {/* Subtle radial glow */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] rounded-full bg-white/[0.04] blur-3xl" />
@@ -114,7 +114,7 @@ export function Hero() {
       </div>
 
       {/* Bottom marquee */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden border-t border-white/10 py-4 hidden md:block">
+      <div className="absolute bottom-[-16px] left-0 right-0 overflow-hidden border-t border-white/10 py-4 hidden md:block">
         <motion.div
           animate={{ x: ['0%', '-50%'] }}
           transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
