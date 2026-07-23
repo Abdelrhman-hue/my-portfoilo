@@ -9,6 +9,11 @@ const experiences = [
     description:
       'A complete online store with product catalog, cart, checkout flow, authentication and an admin dashboard. Built with Next.js on the front end and a Node/Express + MongoDB API on the back end.',
     skills: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+    links: [
+      { label: 'Live Demo', href: 'https://e-commerce-six-eta-60.vercel.app' },
+      { label: 'GitHub — Frontend', href: 'https://github.com/Abdelrhman-hue/E-commerce' },
+      { label: 'GitHub — Backend', href: 'https://github.com/Abdelrhman-hue/Back-end' },
+    ],
   },
   {
     title: 'Personal Portfolio',
@@ -18,6 +23,7 @@ const experiences = [
     description:
       'A minimal editorial-style portfolio to showcase projects and technical writing. Focused on typography, motion, and performance with a fully responsive layout.',
     skills: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    links: [],
   },
   {
     title: 'Admin Dashboard',
@@ -27,6 +33,7 @@ const experiences = [
     description:
       'A modern admin dashboard for managing users, orders and analytics. Built with a component-driven architecture, Redux Toolkit for state and a clean, accessible UI.',
     skills: ['React', 'Redux Toolkit', 'TypeScript', 'Charts', 'REST API', 'Tailwind CSS'],
+    links: [],
   },
 ]
 
@@ -101,6 +108,21 @@ export function Work() {
                       </span>
                     ))}
                   </div>
+                  {exp.links && exp.links.length > 0 && (
+                    <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                      {exp.links.map((l) => (
+                        <a
+                          key={l.href}
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-gray-300 hover:text-white underline underline-offset-4 tracking-wide"
+                        >
+                          {l.label} ↗
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.article>
