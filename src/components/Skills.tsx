@@ -1,18 +1,35 @@
 import { motion } from 'framer-motion'
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiRedux,
+  SiTailwindcss,
+  SiPostman,
+  SiGithub,
+  SiFramer,
+  SiFigma,
+} from 'react-icons/si'
+import type { IconType } from 'react-icons'
 
-const skills = [
-  'React.js',
-  'Next.js',
-  'TypeScript',
-  'Node.js',
-  'Express.js',
-  'MongoDB',
-  'Redux Toolkit',
-  'Tailwind CSS',
-  'REST APIs',
-  'Git & GitHub',
-  'Framer Motion',
-  'Figma to Code',
+type Skill = { name: string; icon: IconType; color: string }
+
+const skills: Skill[] = [
+  { name: 'React.js', icon: SiReact, color: '#61DAFB' },
+  { name: 'Next.js', icon: SiNextdotjs, color: '#FFFFFF' },
+  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+  { name: 'Node.js', icon: SiNodedotjs, color: '#8CC84B' },
+  { name: 'Express.js', icon: SiExpress, color: '#FFFFFF' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'Redux Toolkit', icon: SiRedux, color: '#764ABC' },
+  { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#38BDF8' },
+  { name: 'REST APIs', icon: SiPostman, color: '#FF6C37' },
+  { name: 'Git & GitHub', icon: SiGithub, color: '#FFFFFF' },
+  { name: 'Framer Motion', icon: SiFramer, color: '#0055FF' },
+  { name: 'Figma to Code', icon: SiFigma, color: '#F24E1E' },
 ]
 
 const fadeInUp = {
@@ -41,20 +58,31 @@ export function Skills() {
 
         {/* Skills List */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4 lg:gap-y-6">
-          {skills.map((skill, index) => (
+          {skills.map((skill, index) => {
+            const Icon = skill.icon
+            return (
             <motion.div
-              key={skill}
+              key={skill.name}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="border-b border-gray-800 pb-4"
+              className="group border-b border-gray-800 pb-4 flex items-center gap-4 hover:border-gray-500 transition-colors"
             >
-              <span className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light">
-                {skill}
+              <motion.span
+                whileHover={{ scale: 1.2, rotate: 8 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+                className="text-2xl md:text-3xl shrink-0"
+                style={{ color: skill.color }}
+              >
+                <Icon />
+              </motion.span>
+              <span className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light group-hover:text-white transition-colors">
+                {skill.name}
               </span>
             </motion.div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
